@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { recognizeUser, verifyOtp, saveCheckout } from "../services/api";
 
@@ -76,7 +75,7 @@ function Checkout() {
 
       if (result.success) {
         setShowOtp(false);
-        setMessage(`Welcome, ${result.firstName}!`);
+        setMessage("OTP verified successfully!");
       } else {
         setError(result.message);
       }
@@ -99,6 +98,14 @@ function Checkout() {
         </div>
 
         <div className="rounded-2xl bg-white p-8 shadow-lg">
+          {user && (
+            <div className="mb-6 rounded-lg border border-blue-200 bg-blue-50 px-4 py-3">
+              <p className="text-sm text-gray-500">Welcome</p>
+              <p className="text-lg font-semibold text-gray-800">
+                {user.firstName} {user.lastName}
+              </p>
+            </div>
+          )}
           <form onSubmit={handleCheckout}>
             {/* Email */}
             <div className="mb-6">
