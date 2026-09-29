@@ -1,0 +1,22 @@
+# React
+Frontend/user-login/node_modules/
+Frontend/user-login/dist/
+
+# Java / Maven
+Backend/opt-login/target/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Environment / secrets
+.env
+*.env
+
+# Java JVM crash logs
+hs_err_pid*.log
+replay_pid*.log
+
+# OS
+.DS_Store
+Thumbs.db
